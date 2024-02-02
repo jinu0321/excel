@@ -20,8 +20,9 @@ class NumFormatMaintainer {
       throw Exception('numFmtId $numFmtId already exists');
     }
     if (numFmtId < _firstCustomFmtId) {
-      throw Exception(
-          'invalid numFmtId $numFmtId, custom numFmtId must be $_firstCustomFmtId or greater');
+      // Forked and edited here (1/2)
+      // throw Exception(
+      //     'invalid numFmtId $numFmtId, custom numFmtId must be $_firstCustomFmtId or greater');
     }
     _map[numFmtId] = format;
     _inverseMap[format] = numFmtId;
