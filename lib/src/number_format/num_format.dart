@@ -17,12 +17,13 @@ class NumFormatMaintainer {
 
   void add(int numFmtId, CustomNumFormat format) {
     if (_map.containsKey(numFmtId)) {
-      throw Exception('numFmtId $numFmtId already exists');
+      // throw Exception('numFmtId $numFmtId already exists');
+      return;
     }
     if (numFmtId < _firstCustomFmtId) {
-      // Forked and edited here (1/2)
       // throw Exception(
       //     'invalid numFmtId $numFmtId, custom numFmtId must be $_firstCustomFmtId or greater');
+      return;
     }
     _map[numFmtId] = format;
     _inverseMap[format] = numFmtId;

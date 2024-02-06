@@ -297,9 +297,9 @@ class Parser {
           final numFmtId = int.parse(node.getAttribute('numFmtId')!);
           final formatCode = node.getAttribute('formatCode')!;
           if (numFmtId < 164) {
-            // Forked and edited here (2/2)
             // throw Exception(
             //     'custom numFmtId starts at 164 but found a value of $numFmtId');
+            return;
           }
 
           _excel._numFormats
